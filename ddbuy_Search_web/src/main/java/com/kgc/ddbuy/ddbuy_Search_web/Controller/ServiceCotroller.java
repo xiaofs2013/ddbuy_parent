@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ServiceCotroller {
 
-    @Reference(interfaceClass = SerchService.class,timeout = 8000)
+    @Reference(interfaceClass = SerchService.class,timeout = 8000)  //设置服务时间 避免服务时间太长报错
     private SerchService serchService;
 
     @RequestMapping(value = "/importSolr")
