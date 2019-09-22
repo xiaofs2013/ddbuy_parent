@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_Search_web/ddbuy_Search_web.iml" filepath="$PROJECT_DIR$/ddbuy_Search_web/ddbuy_Search_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_Test/ddbuy_Test.iml" filepath="$PROJECT_DIR$/ddbuy_Test/ddbuy_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_common_interface/ddbuy_common_interface.iml" filepath="$PROJECT_DIR$/ddbuy_common_interface/ddbuy_common_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_common_service/ddbuy_common_service.iml" filepath="$PROJECT_DIR$/ddbuy_common_service/ddbuy_common_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_manage_web/ddbuy_manage_web.iml" filepath="$PROJECT_DIR$/ddbuy_manage_web/ddbuy_manage_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_mapper/ddbuy_mapper.iml" filepath="$PROJECT_DIR$/ddbuy_mapper/ddbuy_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_parent.iml" filepath="$PROJECT_DIR$/ddbuy_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_pojo/ddbuy_pojo.iml" filepath="$PROJECT_DIR$/ddbuy_pojo/ddbuy_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ddbuy_protal_web/ddbuy_protal_web.iml" filepath="$PROJECT_DIR$/ddbuy_protal_web/ddbuy_protal_web.iml" />
+    </modules>
+  </component>
+</project>

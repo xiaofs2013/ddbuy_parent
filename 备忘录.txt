@@ -1,0 +1,29 @@
+项目结构:
+ddybuy-parent  maven工程 pom|springoot父工程(pom)
+
+
+   ddybuy-pojo  jar包  maven工程    存放实体类
+
+
+   ddbuy-mapper   jar包  maven工程    存放dao接口与持久化操作
+   依赖于： ddbuy-common-interface
+
+
+   ddbuy-common-interface  jar包 maven工程   存放所有的服务类接口
+   依赖于：ddybuy-pojo
+   依赖于：pagehelper分页依赖
+
+
+   ddbuy-common-service  jar  springboot工程     服务提供者   实现所有的服务功能
+   依赖于： ddbuy-common-interface
+   依赖于：ddbuy-mapper
+   端口：8081
+   业务工程需要操作数据库，所以添加mapper依赖，并进行SpringBoot整合Mybatis的工作
+
+
+   ddbuy-manage-web    jar包 springbboot工程  服务消费者    天天购的后台管理系统
+   依赖于： ddbuy-common-interface
+   端口：9001
+
+   ddbuy-protal-web  jar包 springboot工程     服务消费者   天天购的门户系统（前端页面）
+    ?

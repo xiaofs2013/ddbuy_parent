@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ddbuy_manage_web" />
+        <module name="ddbuy_Search_web" />
+        <module name="ddbuy_common_interface" />
+        <module name="ddbuy_common_service" />
+        <module name="ddbuy_pojo" />
+        <module name="ddbuy_protal_web" />
+        <module name="ddbuy_Test" />
+        <module name="ddbuy_mapper" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ddbuy_common_interface" target="1.5" />
+      <module name="ddbuy_common_service" target="1.8" />
+      <module name="ddbuy_manage_web" target="1.8" />
+      <module name="ddbuy_mapper" target="1.5" />
+      <module name="ddbuy_parent" target="1.8" />
+      <module name="ddbuy_pojo" target="1.5" />
+      <module name="ddbuy_protal_web" target="1.8" />
+      <module name="ddbuy_Search_web" target="1.8" />
+      <module name="ddbuy_Test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ddbuy_Search_web" options="-parameters" />
+      <module name="ddbuy_Test" options="-parameters" />
+      <module name="ddbuy_common_service" options="-parameters" />
+      <module name="ddbuy_manage_web" options="-parameters" />
+      <module name="ddbuy_parent" options="-parameters" />
+      <module name="ddbuy_protal_web" options="-parameters" />
+    </option>
+  </component>
+</project>

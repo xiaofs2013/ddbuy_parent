@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <link href="Css/default.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="easyUI/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="easyUI/themes/icon.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" language="JavaScript">
+
+        $(function () {
+            //从服务器中获取数据 并绑定数据至EasyUI 并显示到下拉列表
+            $('#categoryid').combobox(
+                {
+                    url: 'GetGetgroy',
+                    valueField: 'id',
+                    textField: 'name'
+                }
+            )
+
+
+            //使用异步提交，借助Easyui提交表单
+            //使用EasyUI插件以异步方式提交表单
+            //提交按钮的点击事件
+            $("#button").click(function () {
+
+
+                $('#form1').form('submit', {
+                    url: "addContent",
+                    success: function (data) {  //data表示的字符串
+                        //将返回的json字符串转化为json对象
+                        data = $.parseJSON(data);
+                        if (data.result == 1) {
+                            $.messager.alert('>>提示', '添加成功！', 'info');  //提示框
+                        } else {
+                            $.messager.alert('>>提示', '添加失败！', 'error');
+                        }
+                    }
+                })
+
+            })
+
+        })
+
+
+    </script>
+</head>
+
+<!--注意:上传文件的表单必需以post方式提交且添加enctype属性-->
+
+<body>
+<p>》》 添加广告</p>
+<form method="post" enctype="multipart/form-data" name="form1" id="form1">
+    <p>类别:
+        <label for="select"></label>
+        <select name="categoryId" id="categoryid" style="width: 120px"></select>
+        <!-- <input id="categoryid" name="categoryid" value="aa">-->
+    </p>
+    <p>标题:
+        <input type="text" name="title" id="textfield"/>
+    </p>
+    <p>url:
+        <input type="text" name="url" id="textfield2"/>
+    </p>
+    <p>图片:
+        <input type="file" name="file" id="fileField"/>
+    </p>
+    <p>状态：
+        <input type="radio" checked name="status" id="radio" value="1"/>
+        启用
+        <input type="radio" name="status" id="radio2" value="0"/>
+        停用
+    </p>
+    <p>序号:
+        <input type="text" name="sortOrder" id="textfield3"/>
+    </p>
+    <p>
+        <input type="button" name="button" id="button" value="提交"/>
+    </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
